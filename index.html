@@ -1,12 +1,66 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
     <title>RoundBETS</title>
+    <link rel="stylesheet" href="roundbets.css">
   </head>
   <body>
-
     <h1>RoundBETS</h1>
-    <p>RoundBETS.</p>
 
+    <span>Valor da Aposta: R$ 5,00</span><br>
+    <span>Total do Acumuladão: R$ <span id="bets_total"></span>,00</span><br><br>
+
+    <form id="bet_form" action="/" method="post" enctype="multipart/form-data">
+      <div class="bet">
+        <table>
+        <tr>
+          <th>Jogos</th>
+          <th>Casa</th>
+          <th>Fora</th>
+        </tr>
+        <tr>
+          <td>
+            Flamengo x Palmeiras<br>
+            30/mai 16:00
+          </td>
+          <td><input type="number" id="first_team_home" name="first_team_home" min="0" max="6"></td>
+          <td><input type="number" id="first_team_visitor" name="first_team_visitor" min="0" max="6"></td>
+        </tr>
+        <tr>
+          <td>
+            Chapecoense x Red Bull Bragantino<br>
+            30/mai 18:15
+          </td>
+          <td><input type="number" id="second_team_home" name="second_team_home" min="0" max="6"></td>
+          <td><input type="number" id="second_team_visitor" name="second_team_visitor" min="0" max="6"></td>
+        </tr>
+        <tr>
+          <td>
+            Corinthians x Atlético GO<br>
+            30/mai 18:15
+          </td>
+          <td><input type="number" id="third_team_home" name="third_team_home" min="0" max="6"></td>
+          <td><input type="number" id="third_team_visitor" name="third_team_visitor" min="0" max="6"></td>
+        </tr>
+        <tr>
+          <td>
+            Internacional x Sport<br>
+            30/mai 6:30
+          </td>
+          <td><input type="number" id="fourth_team_home" name="fourth_team_home" min="0" max="6"></td>
+          <td><input type="number" id="fourth_team_visitor" name="fourth_team_visitor" min="0" max="6"></td>
+        </tr>
+      </table>
+      <br>
+
+      <input type="submit" value="Finalizar">
+      </div>
+    </form>
+
+    <span id="bet_code"></span>
+
+    <script src="jquery.min.js"></script>
+    <script src="roundbets.js"></script>
   </body>
 </html>
